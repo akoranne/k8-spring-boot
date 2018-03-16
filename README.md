@@ -94,7 +94,7 @@ Deploy application
 ```
 
 Clean up
-	
+
 ```
 	$ kubectl get pods,deployments,services,secrets -l app=k8-spring-boot
 	NAME                                          READY     STATUS    RESTARTS   AGE
