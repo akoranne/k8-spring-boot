@@ -52,9 +52,9 @@ public class ServiceController {
 		StringBuilder buf = new StringBuilder();
 		buf.append("jdbc:oracle:thin:")
 				// .append(user)
-				.append(env.getProperty("spring.security.user.name"))
+				.append(env.getProperty("vcap.env.user.name"))
 				.append("/")
-				.append(env.getProperty("spring.security.user.password"))
+				.append(env.getProperty("vcap.env.user.password"))
 				.append("@")
 				.append(endpoint)
 				.append(":")

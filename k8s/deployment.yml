@@ -24,3 +24,15 @@ spec:
         image: askxtreme/k8-spring-boot
         ports:
         - containerPort: 8080
+        # specify environment variables (from cloud)
+        env:
+        - name: SECRETS_DEMO_USER
+          valueFrom:
+            secretKeyRef:
+              name: vcap-env
+              key: vcap.env.user.name
+        - name: SECRETS_DEMO_USER_PASSWD
+          valueFrom:
+            secretKeyRef:
+              name: vcap-env
+              key: vcap.env.user.password
