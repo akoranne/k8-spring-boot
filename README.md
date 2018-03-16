@@ -96,7 +96,7 @@ $ minikube service k8-spring-boot-service
 ```
 
 Clean up
-	
+
 ```
 $ kubectl get pods,deployments,services,secrets -l app=k8-spring-boot
 NAME                                          READY     STATUS    RESTARTS   AGE
@@ -114,6 +114,7 @@ $ kubectl delete secret vcap-env
 $ kubectl get pods,deployments,services,secrets
 
 $ minikube stop
+
 ```
 
 
