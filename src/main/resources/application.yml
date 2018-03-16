@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: k8s-spring-boot
+  security:
+    user:
+      name: ${SECRETS_DEMO_USER:demo}
+      password: ${SECRETS_DEMO_USER_PASSWD:demo}
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    enabled-by-default: true
