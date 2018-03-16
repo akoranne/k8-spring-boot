@@ -8,9 +8,9 @@ spec:
   selector:
     matchLabels:
       app: k8-spring-boot
-  # tell deployment # of pods to run using the template provided
-  replicas: 1
-  # create pods using pod definition in this template - k8-spring-boot-app
+  # tells deployment to run 2 pods matching the template
+  replicas: 2
+  # create pods using pod definition in this template
   template: 
     metadata:
       # the name is not included in the meta data as a unique 
@@ -18,9 +18,8 @@ spec:
       labels:
         app: k8-spring-boot
     spec:
-      # breakdown of containers in k8s cluster
       containers:
-      - name: web
-        image: askxtreme/k8-spring-boot
+      - name: nginx
+        image: nginx:1.8
         ports:
-        - containerPort: 8080
+        - containerPort: 80

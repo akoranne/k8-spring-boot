@@ -1,13 +1,13 @@
-apiVersion: v1
 kind: Service
+apiVersion: v1
 metadata:
   name: k8-spring-boot-service
   labels:
-    app: k8-spring-boot-service
+    app: k8-spring-boot
 spec:
+  selector:
+    app: k8-spring-boot
   ports: 
     - port: 8080
       targetPort: 8080
-  selector:
-    app: k8-spring-boot-service
-  type: NodeService
+  type: NodePort
