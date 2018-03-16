@@ -93,7 +93,7 @@ Deploy application
 	  http://192.168.99.100:31369/
 ```
 
-Clean up
+Clean Up
 
 ```
 	$ kubectl get pods,deployments,services,secrets -l app=k8-spring-boot
