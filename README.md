@@ -79,8 +79,18 @@ Deploy application
 
 	$ kubectl apply -f service.yml
 	$ kubectl get pods,deployments,services,secrets -l app=k8-spring-boot
+	
 	$ minikube service k8-spring-boot-service --url
+	  192.168.99.100:31369
+	  
+	$ curl $(minikube service k8-spring-boot-service --url)
+	  {"greeting":"hello world"}
+	  
+	$ curl $(minikube service k8-spring-boot-service --url)/message
+	  Message: Hello default [dburl: jdbc:oracle:thin:scott/tiger@host:port:sid]
+	  
 	$ minikube service k8-spring-boot-service 
+	  http://192.168.99.100:31369/
 ```
 
 Clean up
