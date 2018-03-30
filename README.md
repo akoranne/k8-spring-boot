@@ -71,7 +71,7 @@ Set environmental properties. These properties can be from a file.
 
 Deploy application
 
-````
+```
 	$ cd k8s
 	
 	$ kubectl apply -f deployment.yml
